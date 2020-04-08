@@ -16,3 +16,8 @@
 # Ignore Byebug command history file.
 .byebug_history
 public/uploads/*
+app/controllers/application_controller.rb
+app/views/layouts/mailer.html.erb
+app/views/layouts/mailer.text.erb
+Gemfile
+Gemfile.lock
