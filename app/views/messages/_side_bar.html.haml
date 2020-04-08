@@ -1,0 +1,20 @@
+.side-bar
+  .side-bar__user-name
+    .side-bar__user-name__top-itmes
+      %p.side-bar__user-name__top-itmes__name 
+        masa
+      %ul.side-bar__user-name__top-itmes__btn
+        %li.side-bar__user-name__top-itmes__edit
+          =link_to "#" do
+            = icon('fas', 'edit')
+        %li.side-bar__user-name__top-itmes__create
+          =link_to "#" do
+            = icon('fas', 'cog')
+                
+
+  .side-bar__group-list
+    %ul.side-bar__group-list__one-group
+      %li.side-bar__group-list__one-group__groupname
+        group
+      %li.side-bar__group-list__one-group__last-message
+        message
