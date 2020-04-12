@@ -41,20 +41,23 @@
     background-color: #2f3e51;
     height: calc(100vh - 100px);
     padding:20px;
-    &__one-group{
-      &__groupname{
-        color: #ffffff;
-        font-size: 15px;
-        height: 23px;
-        line-height: 23px;
-        margin-bottom: 5px;
-      }
-      &__last-message{
-        color: #ffffff;
-        font-size: 11px;
-        height: 17px;
-        line-height: 17px;
-        margin-bottom: 40px;
+    .group{
+      &__group-box{
+        text-decoration: none;
+        &__name{
+          color: #ffffff;
+          font-size: 15px;
+          height: 23px;
+          line-height: 23px;
+          margin-bottom: 5px;
+        }
+        &__last-message{
+          color: #ffffff;
+          font-size: 11px;
+          height: 17px;
+          line-height: 17px;
+          margin-bottom: 40px;
+        }
       }
     }
   }

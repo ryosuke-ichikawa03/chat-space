@@ -5,7 +5,7 @@
         = current_user.name
       %ul.side-bar__user-name__top-itmes__btn
         %li.side-bar__user-name__top-itmes__edit
-          =link_to do
+          =link_to new_group_path do
             = icon('fas', 'edit', class: 'icon')
         %li.side-bar__user-name__top-itmes__create
           = link_to edit_user_path(current_user) do
@@ -13,8 +13,10 @@
                 
 
   .side-bar__group-list
-    %ul.side-bar__group-list__one-group
-      %li.side-bar__group-list__one-group__groupname
-        group
-      %li.side-bar__group-list__one-group__last-message
-        message
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#', class:"group-box" do
+          .group__group-box__name
+            = group.name
+          .group__last-message
+            メッセージはまだありません。
