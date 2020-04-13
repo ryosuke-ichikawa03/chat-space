@@ -26,11 +26,10 @@
       %p.main-chat__group-message__message-box__message
         hello
   .main-chat__message-form
-    %form.input-form
-      .input-box
-        %input.input-box__message{placeholder: "type a message", type: "text"}
-        %label.input-box__pict
-          = icon('far', 'image')
-          %input.input-box__pict__file{type: "file"}
-      %input.send-btn{type: "submit"}
-    
+    = form_for [@group, @message] do |f|
+      = f.text_field :post, class: 'main-chat__message-form__message', placeholder: 'type a message'
+      .main-chat__message-form__btn
+        = f.label :image, class: 'main-chat__message-form__btn__image' do
+          = icon('far', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit'Send', class: 'main-chat__message-form__send-btn'

@@ -21,3 +21,5 @@ app/views/layouts/mailer.html.erb
 app/views/layouts/mailer.text.erb
 Gemfile
 Gemfile.lock
+
+public/uploads/*
