@@ -9,22 +9,7 @@
       =link_to "#" ,class:"edit-btn" do
         edit
   .main-chat__group-message
-    .main-chat__group-message__message-box
-      %ul.main-chat__group-message__message-box__message-info
-        %li.main-chat__group-message__message-box__message-info__message-user
-          masa
-        %li.main-chat__group-message__message-box__message-info__message-data
-          2020/00/00/() 00:00:00
-      %p.main-chat__group-message__message-box__message
-        hello
-    .main-chat__group-message__message-box
-      %ul.main-chat__group-message__message-box__message-info
-        %li.main-chat__group-message__message-box__message-info__message-user
-          masa
-        %li.main-chat__group-message__message-box__message-info__message-data
-          2020/00/00/() 00:00:00
-      %p.main-chat__group-message__message-box__message
-        hello
+    = render @messages
   .main-chat__message-form
     = form_for [@group, @message] do |f|
       = f.text_field :post, class: 'main-chat__message-form__message', placeholder: 'type a message'
