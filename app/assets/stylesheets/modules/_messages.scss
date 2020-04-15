@@ -83,13 +83,21 @@
         line-height: 30px;
         margin: 35px 0px 15px 0px;
       }
-      &__group-mem{
+      &__group-list{
         color: #999999;;
         font-size: 12px;
         height: 20px;
         line-height: 20px;
         position: relative;
         margin-left: 40px;
+        display: flex;
+        justify-content: space-between;
+        &__mem{
+          color: #999999;
+          font-size: 12px;
+          line-height: 20px;
+
+        }
       }
     }
     &__edit-space{

@@ -1,10 +1,14 @@
 .main-chat
   .main-chat__group-info
-    %ul.main-chat__group-info__box
-      %li.main-chat__group-info__box__group-name
-        team
-      %li.main-chat__group-info__box__group-mem
-        Member : member
+    .main-chat__group-info__box
+      .main-chat__group-info__box__group-name
+        = @group.name
+      %ul.main-chat__group-info__box__group-list
+        Member:
+        %li.main-chat__group-info__box__group-list__mem
+          - @group.users.each do |user|
+            = user.name
+        
     .main-chat__group-info__edit-space
       =link_to "#" ,class:"edit-btn" do
         edit
