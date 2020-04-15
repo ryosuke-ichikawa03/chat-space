@@ -10,7 +10,7 @@
             = user.name
         
     .main-chat__group-info__edit-space
-      =link_to "#" ,class:"edit-btn" do
+      = link_to edit_group_path(@group) ,class:"edit-btn" do
         edit
   .main-chat__group-message
     = render @messages
