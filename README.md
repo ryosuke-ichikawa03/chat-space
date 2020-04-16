@@ -22,11 +22,11 @@ has_many :groups_users<br>
 has_many :users, though: :groups_users<br>
 has_many :posts
 
-## posts table
+## messages table
 |Column|Type|Options|
 |------|----|-------|
-|message|text|
-|image|integer|
+|post|string|
+|image|string|
 |user_id|references|null: false, foreign_key: true|
 |group_id|references|null: false, foreign_key: true|
 ### Association

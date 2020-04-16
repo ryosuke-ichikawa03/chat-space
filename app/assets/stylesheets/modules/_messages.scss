@@ -41,11 +41,11 @@
     background-color: #2f3e51;
     height: calc(100vh - 100px);
     padding:20px;
-    .group{
-      &__group-box{
+    &__group{
+      .group-box{
         text-decoration: none;
+        color: #ffffff;
         &__name{
-          color: #ffffff;
           font-size: 15px;
           height: 23px;
           line-height: 23px;
@@ -83,13 +83,21 @@
         line-height: 30px;
         margin: 35px 0px 15px 0px;
       }
-      &__group-mem{
+      &__group-list{
         color: #999999;;
         font-size: 12px;
         height: 20px;
         line-height: 20px;
         position: relative;
         margin-left: 40px;
+        display: flex;
+        justify-content: space-between;
+        &__mem{
+          color: #999999;
+          font-size: 12px;
+          line-height: 20px;
+
+        }
       }
     }
     &__edit-space{
@@ -112,8 +120,8 @@
     height: calc(100% - 100px - 90px);
     padding: 40px 35px;
     &__message-box{
-      height: 105px;
       width: 250px;
+      padding-bottom: 46px;
       &__message-info{
         height: 22px;
         width: 210px;
@@ -127,7 +135,7 @@
         }
         &__message-data{
           color: #999999;
-          font-size: 12px;
+          font-size: 10px;
         }
       }
       &__message{
@@ -136,7 +144,10 @@
         height: 20px;
         width: 210px;
         line-height: 20px;
-        margin-bottom: 46px;
+        &__image{
+          height: 113px;
+          width: 200px;
+        }
       }
    }
   }
@@ -147,24 +158,28 @@
     padding:20px 40px;
     position: absolute;
     bottom: 0;
-    .input-form{
-      height: 50px;
+     .new_message{ 
       width: 100%;
+      height: 50px;
       display: flex;
       justify-content: space-between;
-      .input-box{
+      
+    }
+    &__message{
+      height: 50px;
+      width: calc( 100vw - 300px - 100px );
+    }
+    &__btn{
+      height: 50px;
+      margin-right: 15px;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      &__image{
         height: 50px;
-        width: 100%;
-        margin-right: 15px;
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        &__message{
-          height: 50px;
-          width: 100% ;
-          margin: 0px 10px;
-        }
-        .input-box__pict{
+        width: 100% ;
+        margin: 0px 10px;
+        .icon{
           height: 50px;
           width: 50px;
           line-height: 50px;
@@ -172,20 +187,19 @@
           color: black;
           position: absolute;
           right: 10px;
-          .input-box__pict__file{
-            display: none;
-          }
+        }
+        .hidden{
+          display: none;
         }
       }
-      .send-btn{
-        height: 50px;
-        width: 100px;
-        color: white;
-        line-height: 50px;
-        text-align: center;
-        background-color: skyblue;
-      }
     }
+    &__send-btn{
+      height: 50px;
+      width: 100px;
+      color: white;
+      line-height: 50px;
+      text-align: center;
+      background-color: skyblue;
+    } 
   }
-
 }

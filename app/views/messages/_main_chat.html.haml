@@ -1,36 +1,24 @@
 .main-chat
   .main-chat__group-info
-    %ul.main-chat__group-info__box
-      %li.main-chat__group-info__box__group-name
-        team
-      %li.main-chat__group-info__box__group-mem
-        Member : member
+    .main-chat__group-info__box
+      .main-chat__group-info__box__group-name
+        = @group.name
+      %ul.main-chat__group-info__box__group-list
+        Member:
+        %li.main-chat__group-info__box__group-list__mem
+          - @group.users.each do |user|
+            = user.name
+        
     .main-chat__group-info__edit-space
-      =link_to "#" ,class:"edit-btn" do
+      = link_to edit_group_path(@group) ,class:"edit-btn" do
         edit
   .main-chat__group-message
-    .main-chat__group-message__message-box
-      %ul.main-chat__group-message__message-box__message-info
-        %li.main-chat__group-message__message-box__message-info__message-user
-          masa
-        %li.main-chat__group-message__message-box__message-info__message-data
-          2020/00/00/() 00:00:00
-      %p.main-chat__group-message__message-box__message
-        hello
-    .main-chat__group-message__message-box
-      %ul.main-chat__group-message__message-box__message-info
-        %li.main-chat__group-message__message-box__message-info__message-user
-          masa
-        %li.main-chat__group-message__message-box__message-info__message-data
-          2020/00/00/() 00:00:00
-      %p.main-chat__group-message__message-box__message
-        hello
+    = render @messages
   .main-chat__message-form
-    %form.input-form
-      .input-box
-        %input.input-box__message{placeholder: "type a message", type: "text"}
-        %label.input-box__pict
-          = icon('far', 'image')
-          %input.input-box__pict__file{type: "file"}
-      %input.send-btn{type: "submit"}
-    
+    = form_for [@group, @message] do |f|
+      = f.text_field :post, class: 'main-chat__message-form__message', placeholder: 'type a message'
+      .main-chat__message-form__btn
+        = f.label :image, class: 'main-chat__message-form__btn__image' do
+          = icon('far', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit'Send', class: 'main-chat__message-form__send-btn'
