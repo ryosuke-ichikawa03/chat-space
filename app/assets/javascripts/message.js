@@ -41,9 +41,6 @@ $(function(){
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action');
-    $('main-chat__message-form__send-btn').removeAttr('data-disable-with')
-//    $(".main-chat__message-form__send-btn").prop('disabled', false);
-//    $(".main-chat__message-form__send-btn").prop('disabled', true);
     $.ajax({
       url: url,
       type: "POST",
