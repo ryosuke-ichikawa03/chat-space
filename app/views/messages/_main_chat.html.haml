@@ -21,4 +21,4 @@
         = f.label :image, class: 'main-chat__message-form__btn__image' do
           = icon('far', 'image', class: 'icon')
           = f.file_field :image, class: 'hidden'
-      = f.submit'Send', class: 'main-chat__message-form__send-btn'
+      = f.submit'Send', "data-disable-with": "送信中...", class: 'main-chat__message-form__send-btn'
