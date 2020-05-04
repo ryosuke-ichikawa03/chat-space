@@ -15,7 +15,7 @@ $(function(){
           <p>
             ${message.post}
           </p>
-          <img src=${message.image} >
+          <img src=${message.image} class="main-chat__group-message__message-box__message__image">
         </div>
       </div>`
       return html;
