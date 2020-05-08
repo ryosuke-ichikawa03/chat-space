@@ -16,9 +16,9 @@
     = render @messages
   .main-chat__message-form
     = form_for [@group, @message] do |f|
-      = f.text_field :post, class: 'main-chat__message-form__message', placeholder: 'type a message'
-      .main-chat__message-form__btn
-        = f.label :image, class: 'main-chat__message-form__btn__image' do
+      .main-chat__message-form__box
+        = f.text_field :post, placeholder: 'type a message',class: "main-chat__message-form__box__message"
+        = f.label :image, class: 'main-chat__message-form__box__btn' do
           = icon('far', 'image', class: 'icon')
           = f.file_field :image, class: 'hidden'
       = f.submit'Send',  class: 'main-chat__message-form__send-btn'
