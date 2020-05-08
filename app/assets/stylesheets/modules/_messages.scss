@@ -46,19 +46,20 @@
       .group-box{
         text-decoration: none;
         color: #ffffff;
-        &__name{
-          font-size: 15px;
-          height: 23px;
-          line-height: 23px;
-          margin-bottom: 5px;
-        }
-        &__last-message{
-          color: #ffffff;
-          font-size: 11px;
-          height: 17px;
-          line-height: 17px;
-        }
       }
+      &__name{
+        font-size: 15px;
+        height: 23px;
+        line-height: 23px;
+        margin-bottom: 5px;
+      }
+      &__last-message{
+        color: #ffffff;
+        font-size: 11px;
+        height: 17px;
+        line-height: 17px;
+      }
+      
     }
   }
 }
